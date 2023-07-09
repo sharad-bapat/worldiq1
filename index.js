@@ -68,13 +68,13 @@ function showItem(index) {
             }
         }
         var { hostname } = new URL(validUrl);
-        let contentText = item.summary ? removeHtmlTags(item.summary).slice(0, 150) + "[..]" : ``;
+        let contentText = item.summary ? removeHtmlTags(item.summary).slice(0, 100) + "[..]" : ``;
         container1.innerHTML = `
         <div class="card bg-img">
-        <div class="p-4 h-100 d-flex align-items-center">
+        <div class="d-flex align-items-center">
         <div class="container p-2">
             <small class="mb-1" style="color: #ffc61a">worldiq.app</small>
-            <div class="col-12"><img src="${item.visual}" class="img-fluid rounded" alt="..." style="width:90vw;height:200px; object-fit:cover" onerror="removeImage(this)"></div> 
+            <div style="display:flex; align-items:center;justify-content:center"><img src="${item.visual}" class="img-fluid rounded" alt="..." style="max-width:90vw;height:35vh !important; object-fit:contain" onerror="removeImage(this)"></div> 
             <div class="col-12"><h2 class="text-white mt-2" id="tw${index}"> ${item.title}</h2></div> 
             <p class="mt-4">${contentText}</p>         
             <div><p><small style="color:rgb(0, 221, 255)">Swipe up for details <span class="transition-container"><span class="transition-element">^</span></span> </small></p></div>

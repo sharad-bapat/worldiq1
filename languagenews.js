@@ -65,7 +65,7 @@ function showItem(index) {
         <div class="d-flex align-items-center">
         <div class="container">
             <small class="mb-1" style="color: #ffc61a">worldiq.app</small>
-            <div class="col-12"><img src="${item.socialimage}" class="img-fluid rounded" alt="..." style="width:90vw;height:200px; object-fit:cover" onerror="removeImage(this)"></div> 
+            <div class="col-12"><img src="${item.socialimage}" class="img-fluid rounded" alt="..." style="width:90vw;height:200px; object-fit:contain" onerror="removeImage(this)"></div> 
             <div class="col-12"><p class="text-white lead mt-2"> ${item.title}</p></div>                   
             <div><p><small style="color:rgb(0, 221, 255)">Swipe up for details <span class="transition-container"><span class="transition-element">^</span></span> </small></p></div>
             <p class="text-white mb-0 mt-4">
@@ -106,8 +106,8 @@ function autocomplete() {
         var current = $inputC.typeahead("getActive");
         if (current) {
             if (current.toUpperCase() == $inputC.val().toUpperCase()) {
-                country = current.slice(-2);
-                getCountryNews(country);
+                lang = current.slice(-3);
+                getCountryNews(lang);
             }
         }
     }));

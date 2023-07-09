@@ -36,3 +36,15 @@ function getMostReadWikiArticles() {
     }
 }
 
+getNews();
+function getNews() {
+    let type = ["b", "e", "t", "s"]
+    type.forEach(c => {        
+        if (!getLocalStorage(`${c}News`)) {
+            fetch(`https://worldiq-searchnews.t1m3.workers.dev/?&format=json&c=${c}`)
+                .then(response => response.json())
+                .then(data => { items = data; setLocalStorage(`${c}News`, items, 30 * 60000); showItem(0) })
+                .catch(err => console.log(err));
+        }
+    });   
+}
