@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News | World IQ - The pulse of now</title>
+
+    <meta name="author" content="Sharad Bapat" />
+    <meta name="description" content="World IQ Latest News" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+<body>
+    <div style="display: flex; justify-content: space-between; color: #fff;">
+        <div style="text-align: left;font-size: 24px; padding-left: 10px;">World IQ</div>
+        <div style="text-align: right;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16" onclick="toggleMenuContainer()">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </div>       
+    </div>
+    <div class="menu-container">
+        <div class="menu">
+            <a href="index.html" class="menu-item" style="color: #fff!important;">Latest News</a>
+            <a href="mostreadnews.html" class="menu-item">Most Read News</a>
+            <a href="mostreadarticles.html" class="menu-item">Most Read Articles</a>
+            <a href="countrynews.html" class="menu-item">News by Country</a>
+            <a href="languagenews.html" class="menu-item">News by Language</a>
+            <a href="businessnews.html?&c=b" class="menu-item">Business News</a>
+            <a href="entertainmentnews.html?&c=e" class="menu-item">Entertainment News</a>
+            <a href="technologynews.html?&c=t" class="menu-item">Technology News</a>
+            <a href="sportsnews.html?&c=s" class="menu-item">Sports News</a>
+        </div>
+    </div>
+
+    <div class="newsItems" id="main">
+        <div id="newsItem" style="margin: 0 10px; overflow: hidden;">
+            <div class="preloader"></div>
+        </div>
+        <div class="navigation-arrows">
+            <div class="arrow left-arrow" onclick="leftArrowClick()">
+                <svg xmlns="http://www.w3.org/2000/svg" style="padding: 2px;" width="24" height="24" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div>
+            <div class="arrow right-arrow" onclick="rightArrowClick()">
+                <svg xmlns="http://www.w3.org/2000/svg" style="padding: 2px;" width="24" height="24" fill="currentColor"
+                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script src="localstorage.js"></script>
+    <script src="data.js"></script>
+    <script src="modal.js"></script>
+    <script src="index.js"></script>
+</body>
+</head>
+
+</html>
