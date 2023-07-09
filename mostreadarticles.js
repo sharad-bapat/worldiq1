@@ -65,8 +65,8 @@ function showItem(index) {
                 <div class="container">
                     <div class="row g-0">
                         <p class="text-white mb-4">worldiq.app</p>
-                        <div class="col-12"><img src="${imgSrc}" class="img-fluid rounded-start" alt="..." style="width:90vw;height:200px; object-fit:cover" onerror="removeImage(this)"> </div>
-                        <p class="text-white lead">${item.titles.normalized}</p> 
+                        <div class="col-12"><img src="${imgSrc}" class="img-fluid rounded-start" alt="..." style="width:90vw;height:35vh; object-fit:cover" onerror="removeImage(this)"> </div>
+                        <h2 class="text-white lead">${item.titles.normalized}</h2> 
                         <p class="text-white mb-0 mt-2">${item.description ? item.description : ""}</p> 
                         <p class="text-white mb-0 mt-2">${item.extract.slice(0,100)}[...]</p>
                         <p class="text-white mb-0 mt-4"><a href="${item.content_urls.mobile.page}" target="_blank" class="text-warning">Read Details ></a></p>  
